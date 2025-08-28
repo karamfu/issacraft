@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway  
+  branch: main
+
+media_folder: "static/uploads"   
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow  
+
+collections:
+  - name: "store"
+    label: "Store"
+    files:
+      - file: "data/products.json"
+        label: "Products"
+        name: "products"
+        fields:
+          - label: "Products"
+            name: "items"
+            widget: "list"
+            collapsed: false
+            summary: "{{fields.category}} — {{fields.name_en}}"
+            fields:
+              - {label: "ID (optional)", name: "id", widget: "number", required: false}
+              - {label: "Published", name: "published", widget: "boolean", default: true}
+              - {label: "Category", name: "category", widget: "select",
+                 options: ["soap","epoxy","chocolate","accessories","raw","flowers","candle","concrete","colors"]}
+              - {label: "Price", name: "price", widget: "number"}
+              - {label: "Currency", name: "currency", widget: "string", default: "SYP"}
+              - {label: "Name (EN)", name: "name_en", widget: "string"}
+              - {label: "Name (AR)", name: "name_ar", widget: "string"}
+              - {label: "Tags (EN)", name: "tags_en", widget: "list", default: []}
+              - {label: "Tags (AR)", name: "tags_ar", widget: "list", default: []}
+              - {label: "Description (EN)", name: "desc_en", widget: "text", required: false}
+              - {label: "Description (AR)", name: "desc_ar", widget: "text", required: false}
+              - {label: "Image", name: "image", widget: "image", required: false}
