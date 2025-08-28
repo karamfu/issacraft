@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": 101,
+      "category": "soap",
+      "price": 50000,
+      "currency": "SYP",
+      "name_en": "Oval Bee Soap Mold",
+      "name_ar": "قالب صابون نحل بيضوي",
+      "tags_en": ["soap","mold"],
+      "tags_ar": ["صابون","قالب"],
+      "desc_en": "",
+      "desc_ar": "",
+      "image": "",
+      "published": true
+    }
+  ]
+}
